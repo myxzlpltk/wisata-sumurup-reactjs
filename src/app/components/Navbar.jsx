@@ -27,7 +27,7 @@ const Navbar = () => {
       as="nav"
       className={classNames("fixed top-0 left-0 right-0 z-10", {
         "bg-gradient-to-b from-black/50 to-transparent": !navbar,
-        "bg-black/25 border-b border-b-white/25": navbar,
+        "bg-black/50 border-b border-b-white/25": navbar,
       })}
     >
       {({ open }) => (

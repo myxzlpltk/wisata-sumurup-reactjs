@@ -19,7 +19,7 @@ const HeroSection = () => {
       className="p-2 sm:px-6 sm:py-10 lg:px-8 lg:py-24 bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url(${cards[indexHero].image})` }}
     >
-      <div className="mt-24 mb-8 mx-auto mt-8 max-w-7xl flex flex-col md:flex-row items-center gap-8">
+      <div className="mt-36 mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-8">
         <div className="basis-full md:basis-1/3 text-white min-w-0">
           <h2 className="text-xl font-medium mb-2">Selamat datang di</h2>
           <h1 className="text-5xl font-bold font-abril mb-6">
