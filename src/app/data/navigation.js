@@ -1,29 +1,34 @@
-import { FaCompass, FaHome, FaPhone, FaRss } from "react-icons/fa";
+import {
+  faCompass,
+  faHome,
+  faPhone,
+  faRss,
+} from "@fortawesome/free-solid-svg-icons";
 
 const navigation = [
   {
     name: "Beranda",
     href: "#home",
     current: true,
-    icon: <FaHome className="inline" />,
+    icon: faHome,
   },
   {
     name: "Destinasi",
     href: "#destination",
     current: false,
-    icon: <FaCompass className="inline" />,
+    icon: faCompass,
   },
   {
     name: "Komunitas",
     href: "#community",
     current: false,
-    icon: <FaRss className="inline" />,
+    icon: faRss,
   },
   {
     name: "Hubungi Kami",
     href: "#contact",
     current: false,
-    icon: <FaPhone className="inline" />,
+    icon: faPhone,
   },
 ];
 

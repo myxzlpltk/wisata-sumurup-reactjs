@@ -1,17 +1,18 @@
-import React, { Fragment } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { Fragment, useState } from "react";
 import { EffectCoverflow } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import cards from "../data/cards";
-import { setIndexHero } from "../slice/appSlice";
 import HeroCard from "./HeroCard";
 
 const HeroSection = () => {
-  const dispatch = useDispatch();
-  const indexHero = useSelector((state) => state.app.indexHero);
+  const [indexHero, setIndexHero] = useState(0);
 
   return (
     <div
@@ -35,9 +36,7 @@ const HeroSection = () => {
         <div className="basis-full md:basis-2/3 min-w-0">
           <Swiper
             modules={[EffectCoverflow]}
-            onSlideChange={(swiper) =>
-              dispatch(setIndexHero(swiper.activeIndex))
-            }
+            onSlideChange={(swiper) => setIndexHero(swiper.activeIndex)}
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
@@ -80,16 +79,16 @@ const SlideButtons = () => {
   return (
     <Fragment>
       <button
-        className="rounded-full text-white p-2 flex items-center justify-center bg-gray-800 hover:bg-primary"
+        className="rounded-full text-white p-2 aspect-square flex items-center justify-center bg-gray-800 hover:bg-primary"
         onClick={() => swiper.slidePrev()}
       >
-        <FaChevronLeft />
+        <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <button
-        className="rounded-full text-white p-2 flex items-center justify-center bg-gray-800 hover:bg-primary"
+        className="rounded-full text-white p-2 aspect-square flex items-center justify-center bg-gray-800 hover:bg-primary"
         onClick={() => swiper.slideNext()}
       >
-        <FaChevronRight />
+        <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </Fragment>
   );

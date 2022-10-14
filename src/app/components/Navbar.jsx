@@ -1,21 +1,19 @@
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Disclosure } from "@headlessui/react";
 import classNames from "classnames";
-import React, { Fragment, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import React, { Fragment, useEffect, useState } from "react";
 import Assets from "../../assets/Assets";
 import navigation from "../data/navigation";
-import { setNavbar } from "../slice/appSlice";
 
 const Navbar = () => {
-  const dispatch = useDispatch();
-  const navbar = useSelector((state) => state.app.navbar);
+  const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 66) {
-      dispatch(setNavbar(true));
+      setNavbar(true);
     } else {
-      dispatch(setNavbar(false));
+      setNavbar(false);
     }
   };
 
@@ -40,9 +38,17 @@ const Navbar = () => {
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-dark">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <FaTimes className="block h-6 w-6" aria-hidden="true" />
+                    <FontAwesomeIcon
+                      icon={faTimes}
+                      className="block h-6 w-6"
+                      aria-hidden="true"
+                    />
                   ) : (
-                    <FaBars className="block h-6 w-6" aria-hidden="true" />
+                    <FontAwesomeIcon
+                      icon={faBars}
+                      className="block h-6 w-6"
+                      aria-hidden="true"
+                    />
                   )}
                 </Disclosure.Button>
               </div>
@@ -70,7 +76,11 @@ const Navbar = () => {
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
-                        {item.icon}
+                        <FontAwesomeIcon
+                          icon={item.icon}
+                          className="inline"
+                          fixedWidth
+                        />
                         <span>{item.name}</span>
                       </a>
                     ))}
@@ -97,7 +107,7 @@ const Navbar = () => {
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
-                  {item.icon}
+                  <FontAwesomeIcon icon={item.icon} className="inline" />
                   <span>{item.name}</span>
                 </Disclosure.Button>
               ))}
