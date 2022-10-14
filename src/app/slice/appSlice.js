@@ -4,17 +4,17 @@ export const appSlice = createSlice({
   name: "app",
   initialState: {
     navbar: false,
-    indexCard: 0,
+    indexHero: 0,
   },
   reducers: {
     setNavbar: (state, action) => {
       state.navbar = action.payload;
     },
-    nextCard: (state) => {
-      state.indexCard++;
+    setIndexHero: (state, action) => {
+      state.indexHero = action.payload;
     },
   },
 });
 
-export const { setNavbar, nextCard } = appSlice.actions;
+export const { setNavbar, setIndexHero } = appSlice.actions;
 export default appSlice.reducer;
