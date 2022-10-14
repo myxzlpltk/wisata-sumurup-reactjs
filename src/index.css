@@ -14,5 +14,22 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+/* Swiper Slide */
+.swiper-slide {
+  opacity: 10%;
+}
+
+.swiper-slide-active {
+  opacity: 100%;
+}
+
+.swiper-slide-prev {
+  opacity: 50%;
+}
+
+.swiper-slide-next, .swiper-slide-next + .swiper-slide {
+  opacity: 100%;
 }

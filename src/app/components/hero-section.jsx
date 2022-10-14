@@ -4,12 +4,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Fragment, useState } from "react";
-import { EffectCoverflow } from "swiper";
+import { Autoplay, EffectCoverflow } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import cards from "../data/cards";
-import HeroCard from "./HeroCard";
+import HeroCard from "./hero-card";
 
 const HeroSection = () => {
   const [indexHero, setIndexHero] = useState(0);
@@ -35,9 +35,9 @@ const HeroSection = () => {
         </div>
         <div className="basis-full md:basis-2/3 min-w-0">
           <Swiper
-            modules={[EffectCoverflow]}
+            modules={[EffectCoverflow, Autoplay]}
             onSlideChange={(swiper) => setIndexHero(swiper.activeIndex)}
-            effect={"coverflow"}
+            effect="coverflow"
             grabCursor={true}
             centeredSlides={true}
             coverflowEffect={{
@@ -47,20 +47,19 @@ const HeroSection = () => {
               modifier: 1,
               slideShadows: false,
             }}
-            slidesPerView={"auto"}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            slidesPerView="auto"
+            watchSlidesProgress={true}
           >
             {cards.map((data, index) => (
               <SwiperSlide
                 key={`swiper-slide-${index}`}
-                className="max-w-[200px] h-full"
+                className="max-w-[200px] h-full transition duration-500 ease-in-out"
               >
-                {({ isActive }) => (
-                  <HeroCard
-                    diff={index - indexHero}
-                    active={isActive}
-                    {...data}
-                  />
-                )}
+                <HeroCard {...data} />
               </SwiperSlide>
             ))}
             <div className="flex items-center justify-center gap-2 mt-6 mb-2">

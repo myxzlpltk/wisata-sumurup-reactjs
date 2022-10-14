@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Disclosure } from "@headlessui/react";
 import classNames from "classnames";
 import React, { Fragment, useEffect, useState } from "react";
-import Assets from "../../assets/Assets";
+import Index from "../../assets";
 import navigation from "../data/navigation";
 
 const Navbar = () => {
@@ -56,7 +56,7 @@ const Navbar = () => {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-12 w-auto"
-                    src={Assets.logoWhite}
+                    src={Index.logoWhite}
                     alt="Wisata Desa Sumurup"
                   />
                 </div>
