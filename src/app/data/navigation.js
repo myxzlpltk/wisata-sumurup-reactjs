@@ -8,26 +8,22 @@ import {
 const navigation = [
   {
     name: "Beranda",
-    href: "#home",
-    current: true,
+    href: "home",
     icon: faHome,
   },
   {
     name: "Destinasi",
-    href: "#destination",
-    current: false,
+    href: "destination",
     icon: faCompass,
   },
   {
     name: "Komunitas",
-    href: "#community",
-    current: false,
+    href: "community",
     icon: faRss,
   },
   {
     name: "Hubungi Kami",
-    href: "#contact",
-    current: false,
+    href: "contact",
     icon: faPhone,
   },
 ];

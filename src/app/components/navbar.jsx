@@ -2,12 +2,16 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Disclosure } from "@headlessui/react";
 import classNames from "classnames";
-import React, { Fragment, useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import React, { useEffect, useRef, useState } from "react";
 import Index from "../../assets";
 import navigation from "../data/navigation";
+import { Link } from "react-scroll";
 
-const Navbar = () => {
+const Navbar = ({ activeIndex }) => {
   const [navbar, setNavbar] = useState(false);
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
 
   const changeBackground = () => {
     if (window.scrollY >= 66) {
@@ -19,20 +23,21 @@ const Navbar = () => {
 
   useEffect(() => {
     changeBackground();
+    setHeight(ref.current.clientHeight);
     window.addEventListener("scroll", changeBackground);
   });
 
   return (
-    <Disclosure
-      as="nav"
-      className={classNames("fixed top-0 left-0 right-0 z-10", {
-        "bg-gradient-to-b from-black/50 to-transparent": !navbar,
-        "bg-black/50 border-b border-b-white/25": navbar,
-      })}
-    >
+    <Disclosure ref={ref} as="nav" className="fixed top-0 left-0 right-0 z-10">
       {({ open }) => (
-        <Fragment>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 sm:py-2 lg:px-8 lg:py-4">
+        <div
+          className={classNames({
+            "bg-gradient-to-b from-black/50 to-transparent": !navbar && !open,
+            "bg-black/50 border-b border-b-white/25": navbar && !open,
+            "bg-dark": open,
+          })}
+        >
+          <div className="container md:py-2 xl:py-4">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-dark">
@@ -63,18 +68,13 @@ const Navbar = () => {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          "px-3 py-2 text-md font-medium flex space-x-2 items-center",
-                          {
-                            "bg-white text-primary": item.current,
-                            "text-white hover:bg-white hover:text-primary":
-                              !item.current,
-                          }
-                        )}
-                        aria-current={item.current ? "page" : undefined}
+                        to={item.href}
+                        spy={true}
+                        activeClass="bg-white text-primary"
+                        className="px-3 py-2 text-md font-medium flex space-x-2 items-center cursor-pointer text-white hover:bg-white hover:text-primary rounded"
+                        offset={-height}
                       >
                         <FontAwesomeIcon
                           icon={item.icon}
@@ -82,7 +82,7 @@ const Navbar = () => {
                           fixedWidth
                         />
                         <span>{item.name}</span>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -94,29 +94,32 @@ const Navbar = () => {
             <div className="space-y-1 pt-2 pb-3">
               {navigation.map((item) => (
                 <Disclosure.Button
+                  as={Link}
                   key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    "block px-3 py-2 text-base flex space-x-2 items-center",
-                    {
-                      "bg-white text-dark font-semibold": item.current,
-                      "text-white font-medium hover:bg-white hover:text-primary":
-                        !item.current,
-                    }
-                  )}
-                  aria-current={item.current ? "page" : undefined}
+                  to={item.href}
+                  spy={true}
+                  activeClass="bg-white text-primary"
+                  className="block px-3 py-2 text-md font-medium flex space-x-2 items-center cursor-pointer text-white hover:bg-white hover:text-primary"
+                  offset={-height}
                 >
-                  <FontAwesomeIcon icon={item.icon} className="inline" />
+                  <FontAwesomeIcon
+                    icon={item.icon}
+                    className="inline"
+                    fixedWidth
+                  />
                   <span>{item.name}</span>
                 </Disclosure.Button>
               ))}
             </div>
           </Disclosure.Panel>
-        </Fragment>
+        </div>
       )}
     </Disclosure>
   );
+};
+
+Navbar.propTypes = {
+  activeIndex: PropTypes.number.isRequired,
 };
 
 export default Navbar;
