@@ -45,7 +45,7 @@ const HeroSection = () => {
               stretch: 30,
               depth: 100,
               modifier: 1,
-              slideShadows: false,
+              slideShadows: true,
             }}
             autoplay={{
               delay: 2500,
@@ -63,7 +63,10 @@ const HeroSection = () => {
               </SwiperSlide>
             ))}
             <div className="flex items-center justify-center gap-2 mt-6 mb-2">
-              <SlideButtons />
+              <SlideButtons
+                allowSlidePrev={indexHero !== 0}
+                allowSlideNext={indexHero !== cards.length - 1}
+              />
             </div>
           </Swiper>
         </div>
@@ -72,20 +75,22 @@ const HeroSection = () => {
   );
 };
 
-const SlideButtons = () => {
+const SlideButtons = ({ allowSlidePrev, allowSlideNext }) => {
   const swiper = useSwiper();
 
   return (
     <Fragment>
       <button
-        className="rounded-full text-white p-2 aspect-square flex items-center justify-center bg-gray-800 hover:bg-primary"
-        onClick={() => swiper.slidePrev()}
+        className="rounded-full p-2 aspect-square flex items-center justify-center shadow-lg bg-white hover:bg-secondary disabled:bg-gray-500 text-black disabled:text-white"
+        disabled={!allowSlidePrev}
+        onClick={allowSlideNext ? () => swiper.slidePrev() : null}
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <button
-        className="rounded-full text-white p-2 aspect-square flex items-center justify-center bg-gray-800 hover:bg-primary"
-        onClick={() => swiper.slideNext()}
+        className="rounded-full p-2 aspect-square flex items-center justify-center shadow-lg bg-white hover:bg-secondary disabled:bg-gray-500 text-black disabled:text-white"
+        disabled={!allowSlideNext}
+        onClick={allowSlideNext ? () => swiper.slideNext() : null}
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
