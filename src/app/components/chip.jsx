@@ -5,15 +5,16 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const Chip = (props) => {
-  const { active, text, onClick } = props;
+  const { active, activeColor, text, onClick } = props;
 
   return (
     <div
       onClick={onClick}
       className={classNames(
         "select-none flex items-center gap-1 px-2.5 py-1.5 rounded-full font-medium text-xs flex align-center w-max cursor-pointer transition duration-300 ease",
+        active ? activeColor : "",
         {
-          "text-white bg-green-600 hover:bg-green-700": active,
+          "text-white": active,
           "text-gray-500 bg-gray-200 hover:bg-gray-300": !active,
         }
       )}
@@ -26,6 +27,7 @@ const Chip = (props) => {
 
 Chip.propTypes = {
   active: PropTypes.bool,
+  activeColor: PropTypes.string,
   onClick: PropTypes.func,
   text: PropTypes.node,
 };

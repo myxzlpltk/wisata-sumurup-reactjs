@@ -81,21 +81,25 @@ const DestinationsSection = (props) => {
                 <Chip
                   text="Alam"
                   active={categories.has("nature")}
+                  activeColor="bg-green-600 hover:bg-green-700"
                   onClick={() => toggleCategory("nature")}
                 />
                 <Chip
                   text="Religi"
                   active={categories.has("religion")}
+                  activeColor="bg-yellow-600 hover:bg-yellow-700"
                   onClick={() => toggleCategory("religion")}
                 />
                 <Chip
                   text="Edukasi"
                   active={categories.has("education")}
+                  activeColor="bg-blue-600 hover:bg-blue-700"
                   onClick={() => toggleCategory("education")}
                 />
                 <Chip
                   text="Edukasi"
                   active={categories.has("culinary")}
+                  activeColor="bg-red-600 hover:bg-red-700"
                   onClick={() => toggleCategory("culinary")}
                 />
               </div>
