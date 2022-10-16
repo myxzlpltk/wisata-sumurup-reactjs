@@ -24,9 +24,7 @@ const Navbar = () => {
     changeBackground();
     setHeight(ref.current.clientHeight);
     window.addEventListener("scroll", changeBackground);
-  }, [setHeight]);
-
-  console.log(isMenuOpen);
+  }, []);
 
   return (
     <nav ref={ref} className="fixed top-0 left-0 right-0 z-10">
@@ -80,7 +78,7 @@ const Navbar = () => {
                       smooth={true}
                       duration={500}
                       activeClass="bg-white text-primary"
-                      className="px-3 py-2 text-md font-medium flex space-x-2 items-center cursor-pointer text-white hover:bg-white hover:text-primary rounded"
+                      className="select-none px-3 py-2 text-md font-medium flex space-x-2 items-center cursor-pointer text-white hover:bg-white hover:text-primary rounded"
                       offset={-height}
                     >
                       <FontAwesomeIcon
@@ -113,7 +111,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 activeClass="bg-white text-primary"
-                className="block px-3 py-2 text-md font-medium flex space-x-2 items-center cursor-pointer text-white hover:bg-white hover:text-primary"
+                className="block select-none px-3 py-2 text-md font-medium flex space-x-2 items-center cursor-pointer text-white hover:bg-white hover:text-primary"
                 offset={-height}
               >
                 <FontAwesomeIcon

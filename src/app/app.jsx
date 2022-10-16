@@ -1,7 +1,7 @@
 import React from "react";
-import DestinationsSection from "./components/destinations-section";
-import HeroSection from "./components/hero-section";
-import Navbar from "./components/navbar";
+import DestinationsSection from "./organisms/destinations-section";
+import HeroSection from "./organisms/hero-section";
+import Navbar from "./organisms/navbar";
 
 const App = () => {
   return (

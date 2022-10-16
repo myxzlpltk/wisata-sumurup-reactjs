@@ -4,17 +4,18 @@ import { Autoplay, EffectCoverflow } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { Swiper, SwiperSlide } from "swiper/react";
+import HeroCard from "../components/hero-card";
+import SlideButtons from "../components/slide-buttons";
 import cards from "../data/cards";
-import HeroCard from "./hero-card";
-import SlideButtons from "./slide-buttons";
 
 const HeroSection = (props) => {
+  const { id, innerRef } = props;
   const [indexHero, setIndexHero] = useState(0);
 
   return (
     <div
-      ref={props.innerRef}
-      id={props.id}
+      ref={innerRef}
+      id={id}
       className="bg-cover bg-center bg-fixed pt-24"
       style={{ backgroundImage: `url(${cards[indexHero].image})` }}
     >

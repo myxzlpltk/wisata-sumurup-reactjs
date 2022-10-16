@@ -1,53 +1,41 @@
-const destinations = {
-  "Wisata Alam": [
-    {
-      id: 1,
-      title: "Does drinking coffee make you smarter?",
-      date: "5h ago",
-      commentCount: 5,
-      shareCount: 2,
-    },
-    {
-      id: 2,
-      title: "So you've bought coffee... now what?",
-      date: "2h ago",
-      commentCount: 3,
-      shareCount: 2,
-    },
-  ],
-  "Wisata Religi": [
-    {
-      id: 1,
-      title: "Is tech making coffee better or worse?",
-      date: "Jan 7",
-      commentCount: 29,
-      shareCount: 16,
-    },
-    {
-      id: 2,
-      title: "The most innovative things happening in coffee",
-      date: "Mar 19",
-      commentCount: 24,
-      shareCount: 12,
-    },
-  ],
-  "Wisata Edukasi": [
-    {
-      id: 1,
-      title: "Ask Me Anything: 10 answers to your questions about coffee",
-      date: "2d ago",
-      commentCount: 9,
-      shareCount: 5,
-    },
-    {
-      id: 2,
-      title: "The worst advice we've ever heard about coffee",
-      date: "4d ago",
-      commentCount: 1,
-      shareCount: 2,
-    },
-  ],
-  "Wisata Kuliner": [],
-};
+import Assets from "../../assets";
+
+const destinationTypes = ["nature", "religion", "education", "culinary"];
+
+const destinations = [
+  {
+    title: "Kedung Gede",
+    description:
+      "Kedung Gede is a mountain in the province of West Java, Indonesia. " +
+      "It is located in the Cianjur Regency, about 50 km from the city of Bandung. " +
+      "The mountain is located in the Citarum River basin, and is part of the Citarum watershed.",
+    type: "nature",
+    images: [
+      Assets.bgKedungGede,
+      Assets.bgRinginPutih,
+      Assets.bgKedungGede,
+      Assets.bgRinginPutih,
+      Assets.bgKedungGede,
+    ],
+    bigImages: [
+      Assets.bgKedungGede,
+      Assets.bgRinginPutih,
+      Assets.bgKedungGede,
+      Assets.bgRinginPutih,
+      Assets.bgKedungGede,
+    ],
+  },
+  {
+    title: "Ringin Putih",
+    description:
+      "Ringin Putih is a mountain in the province of West Java, Indonesia. " +
+      "It is located in the Cianjur Regency, about 50 km from the city of Bandung. " +
+      "The mountain is located in the Citarum River basin, and is part of the Citarum watershed.",
+    type: "religion",
+    images: [Assets.bgRinginPutih],
+    bigImages: [Assets.bgKedungGede],
+  },
+];
 
 export default destinations;
+export { destinationTypes };

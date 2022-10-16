@@ -34,3 +34,46 @@ code {
 .swiper-slide-next, .swiper-slide-next + .swiper-slide {
     opacity: 100%;
 }
+
+/* React Spring Bottom Sheet */
+:root {
+    --rsbs-backdrop-bg: rgba(0, 0, 0, 0.6);
+    --rsbs-bg: theme('colors.white');
+    --rsbs-handle-bg: theme('colors.gray.500');
+    --rsbs-max-w: auto;
+    --rsbs-ml: env(safe-area-inset-left);
+    --rsbs-mr: env(safe-area-inset-right);
+    --rsbs-overlay-rounded: 16px;
+}
+
+@media (min-width: 550px) {
+    :root {
+        --rsbs-max-w: 550px;
+        --rsbs-ml: auto;
+        --rsbs-mr: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --rsbs-max-w: 550px;
+        --rsbs-ml: auto;
+        --rsbs-mr: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --rsbs-max-w: 550px;
+        --rsbs-ml: auto;
+        --rsbs-mr: 4rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --rsbs-max-w: 550px;
+        --rsbs-ml: auto;
+        --rsbs-mr: 8rem;
+    }
+}
