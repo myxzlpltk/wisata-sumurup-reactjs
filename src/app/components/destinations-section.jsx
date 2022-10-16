@@ -1,4 +1,3 @@
-import { Tab } from "@headlessui/react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
@@ -28,30 +27,25 @@ const DestinationsSection = (props) => {
         </div>
         <div className="basis-2/3">
           <div className="w-full md:max-w-lg md:ml-auto md:py-4">
-            <Tab.Group
-              selectedIndex={selectedIndex}
-              onChange={setSelectedIndex}
-            >
-              <Tab.List className="flex space-x-1 rounded-xl bg-green-900/10 p-1">
-                {Object.keys(destinations).map((category) => (
-                  <Tab
-                    key={category}
-                    className={({ selected }) =>
-                      classNames(
-                        "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700",
-                        "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none",
-                        {
-                          "text-black bg-white shadow": selected,
-                          "text-dark hover:bg-white/[0.12]": !selected,
-                        }
-                      )
+            <div className="flex space-x-1 rounded-xl bg-green-900/10 p-1">
+              {Object.keys(destinations).map((category, index) => (
+                <button
+                  key={category}
+                  className={classNames(
+                    "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700",
+                    "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none",
+                    {
+                      "text-black bg-white shadow": selectedIndex === index,
+                      "text-dark hover:bg-white/[0.12]":
+                        selectedIndex !== index,
                     }
-                  >
-                    {category}
-                  </Tab>
-                ))}
-              </Tab.List>
-            </Tab.Group>
+                  )}
+                  onClick={() => setSelectedIndex(index)}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
