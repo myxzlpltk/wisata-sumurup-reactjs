@@ -2,6 +2,7 @@
   "name": "wisata-sumurup-reactjs",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://myxzlpltk.github.io/wisata-sumurup-reactjs",
   "dependencies": {
     "@fontsource/abril-fatface": "^4.5.9",
     "@fontsource/open-sans": "^4.5.12",
