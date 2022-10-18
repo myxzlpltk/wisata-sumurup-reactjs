@@ -1,21 +1,7 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
-import { destinationTypes } from "../data/destinations";
-
-const translations = {
-  nature: "Wisata Alam",
-  religion: "Wisata Religi",
-  education: "Wisata Edukasi",
-  culinary: "Wisata Kuliner",
-};
-
-const colors = {
-  nature: "bg-green-100",
-  religion: "bg-yellow-100",
-  education: "bg-blue-100",
-  culinary: "bg-red-100",
-};
+import { colors, destinationTypes, translations } from "../data/destinations";
 
 const DestinationCard = (props) => {
   const { type, title, description, images, onClick } = props;

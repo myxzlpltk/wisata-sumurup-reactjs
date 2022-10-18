@@ -1,4 +1,8 @@
-import { faExpand, faFilter } from "@fortawesome/free-solid-svg-icons";
+import {
+  faDirections,
+  faExpand,
+  faFilter,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import React, { Fragment, useState } from "react";
@@ -12,7 +16,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import * as animationData from "../../assets/lottie/no-data.json";
 import Chip from "../components/chip";
 import DestinationCard from "../components/destination-card";
-import destinations, { destinationTypes } from "../data/destinations";
+import destinations, {
+  destinationTypes,
+  translations,
+} from "../data/destinations";
 
 const DestinationsSection = (props) => {
   const { id, innerRef } = props;
@@ -188,12 +195,34 @@ const DestinationsSection = (props) => {
               </div>
             </div>
             <div className="px-4 py-2">
-              <h3 className="text-xl font-bold -tracking-widest">
-                {activeDestination.title}
-              </h3>
-              <p className="text-sm text-gray-500 tracking-tighter">
+              <div className="flex items-center mb-1">
+                <h3 className="flex-auto text-xl font-bold -tracking-widest">
+                  {activeDestination.title}
+                </h3>
+                <span className="flex-none text-gray-500 text-xs">
+                  {translations[activeDestination.type] ||
+                    activeDestination.type}
+                </span>
+              </div>
+              <p className="text-sm text-gray-500 tracking-tighter mb-2">
                 {activeDestination.description}
               </p>
+
+              <button
+                onClick={() => window.open(activeDestination.directionLink)}
+                className="relative inline-flex items-center justify-start py-2 pl-4 pr-12 overflow-hidden text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group"
+              >
+                <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
+                <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                  <FontAwesomeIcon icon={faDirections} />
+                </span>
+                <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                  <FontAwesomeIcon icon={faDirections} inverse />
+                </span>
+                <span className="relative w-full text-left text-sm transition-colors duration-200 ease-in-out group-hover:text-white">
+                  Petunjuk Arah
+                </span>
+              </button>
             </div>
           </Fragment>
         </BottomSheet>
