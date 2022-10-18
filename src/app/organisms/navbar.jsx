@@ -33,7 +33,8 @@ const Navbar = () => {
           "bg-dark": isMenuOpen,
           "bg-gradient-to-b from-black/50 to-transparent":
             !navbar && !isMenuOpen,
-          "bg-black/50 border-b border-b-white/25": navbar && !isMenuOpen,
+          "bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border-b border-b-white/25":
+            navbar && !isMenuOpen,
         })}
       >
         <div className="container md:py-2 xl:py-4">
