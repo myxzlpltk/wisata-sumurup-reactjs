@@ -36,7 +36,7 @@ const CommunitySection = (props) => {
               alt="Komunitas kelompok sadar wisata Desa Sumurup"
               className="w-full max-w-sm mx-auto"
             />
-            <h2 className="-mt-32 mx-auto text-6xl font-open-sans-condensed font-bold text-center mb-4">
+            <h2 className="-mt-24 mx-auto text-6xl font-open-sans-condensed font-bold text-center mb-4">
               Sapa Komunitas Kami
             </h2>
             <p className="mx-auto max-w-sm text-md tracking-tight text-center text-gray-600 mb-2">
