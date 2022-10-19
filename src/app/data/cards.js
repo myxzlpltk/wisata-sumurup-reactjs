@@ -1,45 +1,43 @@
-import Assets from "../../assets";
-
 const cards = [
   {
     title: "Kedung Gede",
     subtitle: "Sungai yang terbendung",
-    image: Assets.bgKedungGede,
+    image: "/images/kedunggede.jpg",
   },
   {
     title: "Ringin Putih",
     subtitle: "Camping zone asyik",
-    image: Assets.bgRinginPutih,
+    image: "/images/ringinputih.jpg",
   },
   {
     title: "Kedung Gede",
     subtitle: "Sungai yang terbendung",
-    image: Assets.bgKedungGede,
+    image: "/images/kedunggede.jpg",
   },
   {
     title: "Ringin Putih",
     subtitle: "Camping zone asyik",
-    image: Assets.bgRinginPutih,
+    image: "/images/ringinputih.jpg",
   },
   {
     title: "Kedung Gede",
     subtitle: "Sungai yang terbendung",
-    image: Assets.bgKedungGede,
+    image: "/images/kedunggede.jpg",
   },
   {
     title: "Ringin Putih",
     subtitle: "Camping zone asyik",
-    image: Assets.bgRinginPutih,
+    image: "/images/ringinputih.jpg",
   },
   {
     title: "Kedung Gede",
     subtitle: "Sungai yang terbendung",
-    image: Assets.bgKedungGede,
+    image: "/images/kedunggede.jpg",
   },
   {
     title: "Ringin Putih",
     subtitle: "Camping zone asyik",
-    image: Assets.bgRinginPutih,
+    image: "/images/ringinputih.jpg",
   },
 ];
 

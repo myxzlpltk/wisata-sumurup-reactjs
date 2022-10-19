@@ -19,19 +19,19 @@ code {
 }
 
 /* Swiper Slide */
-.swiper-slide {
+#home .swiper-slide {
     opacity: 10%;
 }
 
-.swiper-slide-active {
+#home .swiper-slide-active {
     opacity: 100%;
 }
 
-.swiper-slide-prev {
+#home .swiper-slide-prev {
     opacity: 50%;
 }
 
-.swiper-slide-next, .swiper-slide-next + .swiper-slide {
+#home .swiper-slide-next, .swiper-slide-next + .swiper-slide {
     opacity: 100%;
 }
 

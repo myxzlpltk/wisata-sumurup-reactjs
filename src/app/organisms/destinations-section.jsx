@@ -22,7 +22,7 @@ import destinations, {
 } from "../data/destinations";
 
 const DestinationsSection = (props) => {
-  const { id, innerRef } = props;
+  const { id } = props;
   const [open, setOpen] = useState(false);
   const [activeDestination, setActiveDestination] = useState(null);
   const [activeIndexImage, setActiveIndexImage] = useState(null);
@@ -64,52 +64,53 @@ const DestinationsSection = (props) => {
 
   return (
     <Fragment>
-      <div ref={innerRef} id={id} className="container py-8 md:py-12 xl:py-16">
-        <div className="mb-8 md:mb-12">
-          <div className="flex flex-col md:flex-row gap-4 items-center">
-            <div className="flex-2">
-              <div className="flex gap-2 mb-2">
-                <div className="h-2 w-1/3 bg-black/80 inline-block"></div>
-                <div className="h-2 w-2 bg-green-500 inline-block"></div>
-                <div className="h-2 w-2 bg-yellow-500 inline-block"></div>
-                <div className="h-2 w-2 bg-blue-500 inline-block"></div>
-                <div className="h-2 w-2 bg-red-500 inline-block"></div>
-              </div>
-              <h1 className="text-4xl font-open-sans-condensed font-black inline">
-                Destinasi yang bisa kamu kunjungi
-              </h1>
+      <div
+        id={id}
+        className="container pt-8 md:pt-12 xl:pt-16 pb-4 md:pb-6 xl:pb-8"
+      >
+        <div className="flex flex-col md:flex-row gap-4 items-center mb-8 md:mb-12">
+          <div className="flex-2">
+            <div className="flex gap-2 mb-2">
+              <div className="h-2 w-1/3 bg-black/80 inline-block"></div>
+              <div className="h-2 w-2 bg-green-500 inline-block"></div>
+              <div className="h-2 w-2 bg-yellow-500 inline-block"></div>
+              <div className="h-2 w-2 bg-blue-500 inline-block"></div>
+              <div className="h-2 w-2 bg-red-500 inline-block"></div>
             </div>
-            <div className="flex-1 w-full">
-              <p className="mb-2 text-lg text-left md:text-right flex items-center justify-start md:justify-end gap-2">
-                <FontAwesomeIcon icon={faFilter} />
-                <span>Filter Jenis Wisata</span>
-              </p>
-              <div className="flex flex-wrap justify-start md:justify-end gap-2">
-                <Chip
-                  text="Alam"
-                  active={categories.has("nature")}
-                  activeColor="bg-green-600 hover:bg-green-700"
-                  onClick={() => toggleCategory("nature")}
-                />
-                <Chip
-                  text="Religi"
-                  active={categories.has("religion")}
-                  activeColor="bg-yellow-600 hover:bg-yellow-700"
-                  onClick={() => toggleCategory("religion")}
-                />
-                <Chip
-                  text="Edukasi"
-                  active={categories.has("education")}
-                  activeColor="bg-blue-600 hover:bg-blue-700"
-                  onClick={() => toggleCategory("education")}
-                />
-                <Chip
-                  text="Edukasi"
-                  active={categories.has("culinary")}
-                  activeColor="bg-red-600 hover:bg-red-700"
-                  onClick={() => toggleCategory("culinary")}
-                />
-              </div>
+            <h2 className="text-4xl font-open-sans-condensed font-black inline">
+              Destinasi yang bisa kamu kunjungi
+            </h2>
+          </div>
+          <div className="flex-1 w-full">
+            <p className="mb-2 text-lg text-left md:text-right flex items-center justify-start md:justify-end gap-2">
+              <FontAwesomeIcon icon={faFilter} />
+              <span>Filter Jenis Wisata</span>
+            </p>
+            <div className="flex flex-wrap justify-start md:justify-end gap-2">
+              <Chip
+                text="Alam"
+                active={categories.has("nature")}
+                activeColor="bg-green-600 hover:bg-green-700"
+                onClick={() => toggleCategory("nature")}
+              />
+              <Chip
+                text="Religi"
+                active={categories.has("religion")}
+                activeColor="bg-yellow-600 hover:bg-yellow-700"
+                onClick={() => toggleCategory("religion")}
+              />
+              <Chip
+                text="Edukasi"
+                active={categories.has("education")}
+                activeColor="bg-blue-600 hover:bg-blue-700"
+                onClick={() => toggleCategory("education")}
+              />
+              <Chip
+                text="Edukasi"
+                active={categories.has("culinary")}
+                activeColor="bg-red-600 hover:bg-red-700"
+                onClick={() => toggleCategory("culinary")}
+              />
             </div>
           </div>
         </div>
@@ -144,11 +145,11 @@ const DestinationsSection = (props) => {
         <BottomSheet
           open={open}
           onDismiss={closeModal}
-          defaultSnap={({ maxHeight }) => maxHeight * 0.65}
+          defaultSnap={({ maxHeight }) => maxHeight * (2 / 3)}
           snapPoints={({ maxHeight }) => [
             maxHeight * 0.8,
             maxHeight * 0.5,
-            maxHeight * 0.65,
+            maxHeight * (2 / 3),
           ]}
         >
           <Fragment>
@@ -233,7 +234,6 @@ const DestinationsSection = (props) => {
 
 DestinationsSection.propTypes = {
   id: PropTypes.string,
-  innerRef: PropTypes.func,
 };
 
 export default DestinationsSection;

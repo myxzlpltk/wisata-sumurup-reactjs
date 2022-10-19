@@ -9,12 +9,11 @@ import SlideButtons from "../components/slide-buttons";
 import cards from "../data/cards";
 
 const HeroSection = (props) => {
-  const { id, innerRef } = props;
+  const { id } = props;
   const [indexHero, setIndexHero] = useState(0);
 
   return (
     <div
-      ref={innerRef}
       id={id}
       className="bg-cover bg-center bg-fixed pt-24"
       style={{ backgroundImage: `url(${cards[indexHero].image})` }}
@@ -22,9 +21,9 @@ const HeroSection = (props) => {
       <div className="container py-8 md:py-16 xl:py-24">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="basis-1/3 text-white min-w-0">
-            <h2 className="text-2xl font-bold font-open-sans-condensed mb-2">
+            <h3 className="text-2xl font-bold font-open-sans-condensed mb-2">
               Selamat datang di
-            </h2>
+            </h3>
             <h1 className="text-5xl font-bold font-abril mb-6">
               WISATA
               <br />
@@ -52,7 +51,7 @@ const HeroSection = (props) => {
               }}
               autoplay={{
                 delay: 2500,
-                disableOnInteraction: true,
+                disableOnInteraction: false,
               }}
               slidesPerView="auto"
               watchSlidesProgress={true}
@@ -81,7 +80,6 @@ const HeroSection = (props) => {
 
 HeroSection.propTypes = {
   id: PropTypes.string,
-  innerRef: PropTypes.func,
 };
 
 export default HeroSection;
