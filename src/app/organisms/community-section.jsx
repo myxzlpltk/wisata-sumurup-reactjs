@@ -25,31 +25,38 @@ const CommunitySection = (props) => {
 
   return (
     <Fragment>
-      <div className="py-4 md:py-6 xl:py-8" id={id}>
-        <img
-          src="/svg/community.svg"
-          alt="Komunitas kelompok sadar wisata Desa Sumurup"
-          className="w-full max-w-lg mx-auto h-full"
-        />
-        <h2 className="container -mt-32 text-6xl font-open-sans-condensed font-bold text-center mb-4">
-          Sapa Komunitas Kami
-        </h2>
-        <p className="max-w-sm mx-auto text-md tracking-tight text-center text-gray-600 mb-2">
-          Apakah kamu sudah pernah berwisata ke Desa Sumurup? Pasang foto kamu
-          disini!
-        </p>
-        <div className="text-center mb-10">
-          <button
-            className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-white"
-            data-rounded="rounded-md"
-            data-primary="blue-600"
-            data-primary-reset="{}"
-          >
-            Saya ingin memajang foto saya
-          </button>
+      <div
+        className="container py-4 md:py-6 xl:py-8 flex flex-col lg:flex-row gap-10"
+        id={id}
+      >
+        <div className="flex-none text-center">
+          <div className="lg:sticky lg:top-32">
+            <img
+              src="/svg/community.svg"
+              alt="Komunitas kelompok sadar wisata Desa Sumurup"
+              className="w-full max-w-sm mx-auto"
+            />
+            <h2 className="-mt-32 mx-auto text-6xl font-open-sans-condensed font-bold text-center mb-4">
+              Sapa Komunitas Kami
+            </h2>
+            <p className="mx-auto max-w-sm text-md tracking-tight text-center text-gray-600 mb-2">
+              Apakah kamu sudah pernah berwisata ke Desa Sumurup? Pasang foto
+              kamu disini!
+            </p>
+            <div className="text-center">
+              <button
+                className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-white"
+                data-rounded="rounded-md"
+                data-primary="blue-600"
+                data-primary-reset="{}"
+              >
+                Saya ingin memajang foto saya
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div className="container">
+        <div className="flex-1">
           <Masonry
             items={community}
             render={(props) => (
@@ -60,6 +67,7 @@ const CommunitySection = (props) => {
             )}
             columnGutter={10}
             columnWidth={150}
+            role="grid"
           />
         </div>
       </div>
