@@ -1,7 +1,7 @@
 import {
-  faDirections,
   faExpand,
   faFilter,
+  faMapLocation,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
@@ -215,13 +215,13 @@ const DestinationsSection = (props) => {
               >
                 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
                 <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-                  <FontAwesomeIcon icon={faDirections} />
+                  <FontAwesomeIcon icon={faMapLocation} />
                 </span>
                 <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-                  <FontAwesomeIcon icon={faDirections} inverse />
+                  <FontAwesomeIcon icon={faMapLocation} inverse />
                 </span>
                 <span className="relative w-full text-left text-sm transition-colors duration-200 ease-in-out group-hover:text-white">
-                  Petunjuk Arah
+                  Lokasi Wisata
                 </span>
               </button>
             </div>

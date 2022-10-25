@@ -1,5 +1,4 @@
 import { faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons";
-import { faImages } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import React from "react";
@@ -7,7 +6,7 @@ import Image from "react-image-webp";
 
 const SocialMediaCard = (props) => {
   const {
-    data: { type, multiple, placeholder, fallback },
+    data: { type, placeholder, fallback },
     width,
     onClick,
   } = props;
@@ -42,16 +41,6 @@ const SocialMediaCard = (props) => {
           />
         )}
       </div>
-      {multiple && (
-        <div className="absolute top-0 left-0 p-2">
-          <FontAwesomeIcon
-            icon={faImages}
-            size="xl"
-            inverse
-            className="text-white/50 group-hover:text-white"
-          />
-        </div>
-      )}
     </div>
   );
 };
@@ -63,7 +52,6 @@ SocialMediaCard.propTypes = {
     url: PropTypes.string,
     placeholder: PropTypes.string,
     fallback: PropTypes.string,
-    multiple: PropTypes.bool,
   }),
   width: PropTypes.number,
   onClick: PropTypes.func,
