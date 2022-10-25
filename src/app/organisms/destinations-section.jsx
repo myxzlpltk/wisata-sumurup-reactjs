@@ -64,10 +64,7 @@ const DestinationsSection = (props) => {
 
   return (
     <Fragment>
-      <div
-        id={id}
-        className="container pt-8 md:pt-12 xl:pt-16 pb-4 md:pb-6 xl:pb-8"
-      >
+      <div id={id} className="container py-8 md:py-12 xl:py-16">
         <div className="flex flex-col md:flex-row gap-4 items-center mb-8 md:mb-12">
           <div className="flex-2">
             <div className="flex gap-2 mb-2">

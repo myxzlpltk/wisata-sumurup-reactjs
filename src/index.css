@@ -31,8 +31,8 @@ code {
     opacity: 50%;
 }
 
-#home .swiper-slide-next, .swiper-slide-next + .swiper-slide {
-    opacity: 100%;
+#home .swiper-slide-next, .swiper-slide-next ~ .swiper-slide {
+    opacity: 100% !important;
 }
 
 /* React Spring Bottom Sheet */

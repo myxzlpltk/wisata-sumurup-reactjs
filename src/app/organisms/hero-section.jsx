@@ -44,11 +44,12 @@ const HeroSection = (props) => {
               centeredSlides={true}
               coverflowEffect={{
                 rotate: 30,
-                stretch: 30,
+                stretch: 0,
                 depth: 100,
                 modifier: 1,
                 slideShadows: true,
               }}
+              spaceBetween={20}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,

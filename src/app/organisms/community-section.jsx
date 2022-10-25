@@ -26,7 +26,7 @@ const CommunitySection = (props) => {
   return (
     <Fragment>
       <div
-        className="container py-4 md:py-6 xl:py-8 flex flex-col lg:flex-row gap-10"
+        className="container py-8 md:py-12 xl:py-16 flex flex-col lg:flex-row gap-10"
         id={id}
       >
         <div className="flex-none text-center">
