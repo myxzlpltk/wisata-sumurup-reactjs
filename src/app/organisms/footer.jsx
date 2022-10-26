@@ -23,25 +23,23 @@ const Footer = () => {
       <div className="px-4 py-12 sm:px-6 lg:col-span-3 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
-            <p className="font-medium">
-              <p className="text-xs uppercase tracking-widest">
-                <span>Built with </span>
-                <FontAwesomeIcon icon={faHeart} className="text-red-500" />
-                <span> and </span>
-                <FontAwesomeIcon
-                  icon={faReact}
-                  className="text-blue-300"
-                  title="ReactJS"
-                />
-                <span> by</span>
-              </p>
-              <a
-                href="https://github.com/myxzlpltk"
-                className="block text-2xl hover:opacity-75 sm:text-3xl"
-              >
-                @myxzlpltk
-              </a>
+            <p className="font-medium text-xs uppercase tracking-widest">
+              <span>Built with </span>
+              <FontAwesomeIcon icon={faHeart} className="text-red-500" />
+              <span> and </span>
+              <FontAwesomeIcon
+                icon={faReact}
+                className="text-blue-300"
+                title="ReactJS"
+              />
+              <span> by</span>
             </p>
+            <a
+              href="https://github.com/myxzlpltk"
+              className="block text-2xl hover:opacity-75 sm:text-3xl"
+            >
+              @myxzlpltk
+            </a>
 
             <ul className="mt-8 text-sm">
               <li>Kuliah Kerja Nyata Reguler</li>
