@@ -65,8 +65,8 @@ const DestinationsSection = (props) => {
   return (
     <Fragment>
       <div id={id} className="container py-8 md:py-12 xl:py-16">
-        <div className="flex flex-col md:flex-row gap-4 items-center mb-8 md:mb-12">
-          <div className="flex-2">
+        <div className="flex flex-col md:flex-row gap-4 justify-between mb-8 md:mb-12">
+          <div>
             <div className="flex gap-2 mb-2">
               <div className="h-2 w-1/3 bg-black/80 inline-block"></div>
               <div className="h-2 w-2 bg-green-500 inline-block"></div>
@@ -78,7 +78,7 @@ const DestinationsSection = (props) => {
               Destinasi yang bisa kamu kunjungi
             </h2>
           </div>
-          <div className="flex-1 w-full">
+          <div>
             <p className="mb-2 text-lg text-left md:text-right flex items-center justify-start md:justify-end gap-2">
               <FontAwesomeIcon icon={faFilter} />
               <span>Filter Jenis Wisata</span>
