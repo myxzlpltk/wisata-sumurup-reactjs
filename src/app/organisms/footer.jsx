@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-6 border-t border-gray-800 pt-6">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-500 max-w-md">
             Apabila terdapat perubahan pada data maupun pengembangan lebih
             lanjut, silahkan hubungi developer situs web ini melalui email
             <Space />
