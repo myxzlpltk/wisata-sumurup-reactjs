@@ -22,23 +22,23 @@ const DestinationCard = (props) => {
       className="group flex-row cursor-pointer transition duration-300"
       onClick={onClick}
     >
-      <div className="relative aspect-video rounded-xl overflow-hidden mb-2">
+      <div className="aspect-video rounded-xl overflow-hidden mb-2">
         <img
           src={images[activeIndex]}
           alt={title}
           className="object-cover w-full h-full group-hover:brightness-[1.2] group-hover:contrast-[1.2] group-hover:saturate-[1.2]"
         />
-        <div
-          className={classNames(
-            "select-none absolute rounded-xl px-2 py-1 right-2 top-2 text-black/80 text-xs text-center",
-            colors[type]
-          )}
-        >
-          {translations[type] || type}
-        </div>
       </div>
 
-      <h3 className="text-xl font-bold -tracking-widest">{title}</h3>
+      <h6
+        className={classNames(
+          "select-none rounded-xl text-xs font-bold tracking-wide",
+          colors[type]
+        )}
+      >
+        {translations[type] || type}
+      </h6>
+      <h3 className="text-2xl -tracking-wide">{title}</h3>
       <p className="text-sm text-gray-500 tracking-tighter line-clamp-2">
         {description}
       </p>

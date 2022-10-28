@@ -6,10 +6,10 @@ const translations = {
   culinary: "Wisata Kuliner",
 };
 const colors = {
-  nature: "bg-green-100",
-  religion: "bg-yellow-100",
-  education: "bg-blue-100",
-  culinary: "bg-red-100",
+  nature: "text-green-700",
+  religion: "text-yellow-700",
+  education: "text-blue-700",
+  culinary: "text-red-700",
 };
 
 const destinations = [

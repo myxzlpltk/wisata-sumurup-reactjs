@@ -16,7 +16,7 @@ const Footer = () => {
         <Image
           src="/images/footer.jpg"
           webp="/images/footer.webp"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute h-full w-full object-cover object-left-top"
         />
       </div>
 
