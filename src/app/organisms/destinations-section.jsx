@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import React, { Fragment, useState } from "react";
+import { isWebpSupported } from "react-image-webp/dist/utils";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
 import { Autoplay, Navigation } from "swiper";
@@ -102,7 +103,10 @@ const DestinationsSection = (props) => {
         </div>
 
         {filteredDestinations.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          <div
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+            aria-required="false"
+          >
             {filteredDestinations.map((data, index) => (
               <DestinationCard
                 key={`destination-card-${index}`}
@@ -150,11 +154,14 @@ const DestinationsSection = (props) => {
                   setActiveIndexImage(swiper.activeIndex)
                 }
               >
-                {activeDestination.images.map((image, index) => (
+                {(isWebpSupported()
+                  ? activeDestination.imagesWebp
+                  : activeDestination.images
+                ).map((image, index) => (
                   <SwiperSlide key={`modal-image-${index}`}>
                     <div className="relative aspect-video overflow-hidden mb-2">
                       <img
-                        src={image.toString()}
+                        src={image}
                         alt={activeDestination.title}
                         className="object-cover w-full h-full group-hover:brightness-[1.2] group-hover:contrast-[1.2] group-hover:saturate-[1.2]"
                       />

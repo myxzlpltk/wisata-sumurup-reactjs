@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
+import { isWebpSupported } from "react-image-webp/dist/utils";
 import { Autoplay, EffectCoverflow } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -16,7 +17,13 @@ const HeroSection = (props) => {
     <div
       id={id}
       className="bg-cover bg-center bg-fixed pt-24"
-      style={{ backgroundImage: `url(${cards[indexHero].image})` }}
+      style={{
+        backgroundImage: `url(${
+          isWebpSupported()
+            ? cards[indexHero].imageWebp
+            : cards[indexHero].image
+        })`,
+      }}
     >
       <div className="container py-8 md:py-16 xl:py-24">
         <div className="flex flex-col md:flex-row items-center gap-8">

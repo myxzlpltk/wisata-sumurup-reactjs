@@ -1,10 +1,11 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
+import Image from "react-image-webp";
 import { colors, destinationTypes, translations } from "../data/destinations";
 
 const DestinationCard = (props) => {
-  const { type, title, description, images, onClick } = props;
+  const { type, title, description, images, imagesWebp, onClick } = props;
   const [activeIndex, setActiveIndex] = React.useState(0);
 
   useEffect(() => {
@@ -23,13 +24,15 @@ const DestinationCard = (props) => {
       onClick={onClick}
     >
       <div className="aspect-video rounded-xl overflow-hidden mb-2">
-        <img
+        <Image
           src={images[activeIndex]}
+          webp={imagesWebp[activeIndex]}
           alt={title}
           className="object-cover w-full h-full group-hover:brightness-[1.2] group-hover:contrast-[1.2] group-hover:saturate-[1.2]"
         />
       </div>
 
+      <h3 className="text-2xl -tracking-wide">{title}</h3>
       <h6
         className={classNames(
           "select-none rounded-xl text-xs font-bold tracking-wide",
@@ -38,7 +41,6 @@ const DestinationCard = (props) => {
       >
         {translations[type] || type}
       </h6>
-      <h3 className="text-2xl -tracking-wide">{title}</h3>
       <p className="text-sm text-gray-500 tracking-tighter line-clamp-2">
         {description}
       </p>
@@ -50,7 +52,7 @@ DestinationCard.propTypes = {
   type: PropTypes.oneOf(destinationTypes),
   title: PropTypes.string,
   image: PropTypes.arrayOf(PropTypes.string),
-  bigImages: PropTypes.arrayOf(PropTypes.string),
+  imagesWebp: PropTypes.arrayOf(PropTypes.string),
   onClick: PropTypes.func.isRequired,
 };
 

@@ -27,12 +27,12 @@ const destinations = [
       "/images/ringinputih.jpg",
       "/images/kedunggede.jpg",
     ],
-    bigImages: [
-      "/images/kedunggede.jpg",
-      "/images/ringinputih.jpg",
-      "/images/kedunggede.jpg",
-      "/images/ringinputih.jpg",
-      "/images/kedunggede.jpg",
+    imagesWebp: [
+      "/images/kedunggede.webp",
+      "/images/ringinputih.webp",
+      "/images/kedunggede.webp",
+      "/images/ringinputih.webp",
+      "/images/kedunggede.webp",
     ],
     locationLink: "https://goo.gl/maps/5RzwDZzjnE3QQ6C49",
     directionLink:
@@ -46,7 +46,7 @@ const destinations = [
       "The mountain is located in the Citarum River basin, and is part of the Citarum watershed.",
     type: "religion",
     images: ["/images/ringinputih.jpg"],
-    bigImages: ["/images/kedunggede.jpg"],
+    imagesWebp: ["/images/kedunggede.webp"],
     locationLink: "https://goo.gl/maps/PAeyY2SdN6LKnwha9",
     directionLink:
       "https://maps.google.com/maps/dir//Camping+Zone+%22RINGIN+PUTIH%22+Pojok,+Sumurup+Kec.+Bend.+Kabupaten+Trenggalek,+Jawa+Timur+66351/@-7.9807416,111.6935271,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x2e7905dc57d9477d:0x220262a3d4a2f002",
