@@ -2,8 +2,8 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "react-image-webp";
 import { Link } from "react-scroll";
-import Index from "../../assets";
 import navigation from "../data/navigation";
 
 const Navbar = () => {
@@ -62,9 +62,10 @@ const Navbar = () => {
             </div>
             <div className="flex flex-1 items-center justify-center md:justify-between">
               <div className="flex flex-shrink-0 items-center">
-                <img
+                <Image
                   className="h-12 w-auto"
-                  src={Index.logoWhite}
+                  src="/images/logo-white.png"
+                  webp="/images/logo-white.webp"
                   alt="Wisata Desa Sumurup"
                 />
               </div>

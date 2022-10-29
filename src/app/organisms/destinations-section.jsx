@@ -6,14 +6,12 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import React, { Fragment, useState } from "react";
-import Lottie from "react-lottie";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
 import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import * as animationData from "../../assets/lottie/no-data.json";
 import Chip from "../components/chip";
 import DestinationCard from "../components/destination-card";
 import destinations, {
@@ -29,15 +27,6 @@ const DestinationsSection = (props) => {
   const [categories, setCategories] = useState(new Set(destinationTypes));
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   const openModal = (index) => {
     setActiveDestination(filteredDestinations[index]);
@@ -126,11 +115,7 @@ const DestinationsSection = (props) => {
         ) : (
           <Fragment>
             <div className="max-w-sm mx-auto mb-2">
-              <Lottie
-                options={defaultOptions}
-                width="100%"
-                isClickToPauseDisabled={true}
-              />
+              <img src="/svg/no-data.svg" width="100%" alt="No Data" />
             </div>
             <p className="text-lg text-gray-500 text-center">
               Tidak ada data ditemukan
