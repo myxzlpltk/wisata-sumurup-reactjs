@@ -73,6 +73,8 @@ const Navbar = () => {
                 <div className="flex space-x-4">
                   {navigation.map((item) => (
                     <Link
+                      href={`#${item.href}`}
+                      render={(props) => <button {...props} />}
                       key={item.name}
                       to={item.href}
                       spy={true}
@@ -106,6 +108,7 @@ const Navbar = () => {
           <div className="space-y-1 pt-2 pb-3">
             {navigation.map((item) => (
               <Link
+                href={`#${item.href}`}
                 key={item.name}
                 to={item.href}
                 spy={true}
