@@ -9,7 +9,6 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      aria-label="Site Footer"
       className="bg-gray-900 text-white lg:grid lg:grid-cols-5"
     >
       <div className="hidden lg:relative lg:col-span-2 lg:block">
@@ -51,24 +50,27 @@ const Footer = () => {
           <div>
             <p className="font-medium">Tautan Penting</p>
 
-            <nav className="mt-4 flex flex-col space-y-2 text-sm text-gray-300">
+            <nav className="mt-4 flex flex-col text-sm text-gray-300">
               <a
-                className="hover:opacity-75"
+                className="py-2 hover:opacity-75"
                 href="https://sumurup-bendungan.trenggalekkab.go.id/"
               >
                 Situs Web Desa Sumurup
               </a>
               <a
-                className="hover:opacity-75"
+                className="py-2 hover:opacity-75"
                 href="https://instagram.com/kedung.gede"
               >
                 Instagram Kedung Gede
               </a>
-              <a className="hover:opacity-75" href="https://kkn.lp2m.um.ac.id">
+              <a
+                className="py-2 hover:opacity-75"
+                href="https://kkn.lp2m.um.ac.id"
+              >
                 LP2M Universitas Negeri Malang
               </a>
               <a
-                className="hover:opacity-75"
+                className="py-2 hover:opacity-75"
                 href="https://www.instagram.com/kknreg.um_sumurup22/"
               >
                 KKN Reguler UM 2022

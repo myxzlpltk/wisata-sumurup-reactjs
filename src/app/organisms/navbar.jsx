@@ -74,7 +74,6 @@ const Navbar = () => {
                   {navigation.map((item) => (
                     <Link
                       href={`#${item.href}`}
-                      render={(props) => <button {...props} />}
                       key={item.name}
                       to={item.href}
                       spy={true}

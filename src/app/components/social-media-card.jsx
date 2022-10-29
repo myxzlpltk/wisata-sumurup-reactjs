@@ -16,11 +16,13 @@ const SocialMediaCard = (props) => {
       className="group hover:scale-105 cursor-pointer transition duration-300 ease-in-out"
       style={{ maxWidth: width }}
       onClick={onClick}
+      aria-label={`Postingan komunitas di ${type}`}
+      role="feed"
     >
       <Image
         src={fallback}
         webp={placeholder}
-        alt="Postingan komunitas"
+        alt={`Postingan komunitas di ${type}`}
         className="rounded-lg"
       />
       <div className="absolute bottom-0 right-0 p-2">

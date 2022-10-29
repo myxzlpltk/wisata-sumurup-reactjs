@@ -16,6 +16,7 @@ const SlideButtons = ({ allowSlidePrev, allowSlideNext }) => {
         className="rounded-full p-2 aspect-square flex items-center justify-center bg-white hover:bg-secondary disabled:bg-gray-500 text-black disabled:text-white"
         disabled={!allowSlidePrev}
         onClick={allowSlidePrev ? () => swiper.slidePrev() : null}
+        aria-label="Slide sebelumnya"
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
@@ -23,6 +24,7 @@ const SlideButtons = ({ allowSlidePrev, allowSlideNext }) => {
         className="rounded-full p-2 aspect-square flex items-center justify-center bg-white hover:bg-secondary disabled:bg-gray-500 text-black disabled:text-white"
         disabled={!allowSlideNext}
         onClick={allowSlideNext ? () => swiper.slideNext() : null}
+        aria-label="Slide selanjutnya"
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
