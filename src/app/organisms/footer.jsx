@@ -17,6 +17,7 @@ const Footer = () => {
           src="/images/footer.jpg"
           webp="/images/footer.webp"
           className="absolute h-full w-full object-cover object-left-top"
+          alt="Pesona Indonesia oleh Trenggalek"
         />
       </div>
 
