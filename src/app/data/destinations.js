@@ -6,10 +6,16 @@ const translations = {
   culinary: "Wisata Kuliner",
 };
 const colors = {
-  nature: "text-green-700",
-  religion: "text-yellow-700",
-  education: "text-blue-700",
-  culinary: "text-red-700",
+  nature: "text-green-900",
+  religion: "text-yellow-900",
+  education: "text-blue-900",
+  culinary: "text-red-900",
+};
+const bgColors = {
+  nature: "bg-green-100",
+  religion: "bg-yellow-100",
+  education: "bg-blue-100",
+  culinary: "bg-red-100",
 };
 
 const destinations = [
@@ -54,4 +60,4 @@ const destinations = [
 ];
 
 export default destinations;
-export { destinationTypes, colors, translations };
+export { destinationTypes, bgColors, colors, translations };

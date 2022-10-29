@@ -2,7 +2,12 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import Image from "react-image-webp";
-import { colors, destinationTypes, translations } from "../data/destinations";
+import {
+  bgColors,
+  colors,
+  destinationTypes,
+  translations,
+} from "../data/destinations";
 
 const DestinationCard = (props) => {
   const { type, title, description, images, imagesWebp, onClick } = props;
@@ -32,15 +37,16 @@ const DestinationCard = (props) => {
         />
       </div>
 
-      <h3 className="text-2xl -tracking-wide">{title}</h3>
-      <h6
+      <span
         className={classNames(
-          "select-none rounded-xl text-xs font-bold tracking-wide",
-          colors[type]
+          "select-none px-2 py-1 text-xs font-bold tracking-wide inline-block mb-1",
+          colors[type],
+          bgColors[type]
         )}
       >
         {translations[type] || type}
-      </h6>
+      </span>
+      <h3 className="text-lg -tracking-wide">{title}</h3>
       <p className="text-sm text-gray-500 tracking-tighter line-clamp-2">
         {description}
       </p>
