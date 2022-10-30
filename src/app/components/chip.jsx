@@ -14,7 +14,7 @@ const Chip = (props) => {
         "select-none flex items-center gap-1 px-2.5 py-1.5 rounded-full font-medium text-xs flex align-center w-max cursor-pointer transition duration-300 ease",
         active ? activeColor : "",
         {
-          "text-white": active,
+          "text-black": active,
           "text-gray-500 bg-gray-200 hover:bg-gray-300": !active,
         }
       )}
