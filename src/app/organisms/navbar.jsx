@@ -46,17 +46,9 @@ const Navbar = () => {
               >
                 <span className="sr-only">Open main menu</span>
                 {isMenuOpen ? (
-                  <FontAwesomeIcon
-                    icon={faTimes}
-                    className="block h-6 w-6"
-                    aria-hidden="true"
-                  />
+                  <FontAwesomeIcon icon={faTimes} className="block h-6 w-6" />
                 ) : (
-                  <FontAwesomeIcon
-                    icon={faBars}
-                    className="block h-6 w-6"
-                    aria-hidden="true"
-                  />
+                  <FontAwesomeIcon icon={faBars} className="block h-6 w-6" />
                 )}
               </button>
             </div>
