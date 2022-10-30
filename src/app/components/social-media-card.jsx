@@ -18,7 +18,12 @@ const SocialMediaCard = (props) => {
       onClick={onClick}
       role="feed"
     >
-      <Image src={fallback} webp={placeholder} className="rounded-lg" />
+      <Image
+        src={fallback}
+        webp={placeholder}
+        className="rounded-lg"
+        alt={`Postingan komunitas di ${type}`}
+      />
       <div className="absolute bottom-0 right-0 p-2">
         {type === "instagram" && (
           <FontAwesomeIcon
