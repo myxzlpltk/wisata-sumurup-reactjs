@@ -83,12 +83,12 @@ const CommunitySection = (props) => {
             maxHeight * 0.65,
           ]}
         >
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-4 px-2">
             {data.type === "instagram" && (
-              <InstagramEmbed url={data.url} width={328} />
+              <InstagramEmbed url={data.url} width="100%" />
             )}
             {data.type === "tiktok" && (
-              <TikTokEmbed url={data.url} width={480} />
+              <TikTokEmbed url={data.url} width="100%" />
             )}
           </div>
         </BottomSheet>
