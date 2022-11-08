@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5a6e26e7.css",
+    "main.js": "/static/js/main.2435503a.js",
+    "static/js/787.77e46fa3.chunk.js": "/static/js/787.77e46fa3.chunk.js",
+    "static/media/open-sans-all-400-normal.woff": "/static/media/open-sans-all-400-normal.cb2542fccedadc68d737.woff",
+    "static/media/open-sans-condensed-all-300-normal.woff": "/static/media/open-sans-condensed-all-300-normal.7126fef6c8b0af16f040.woff",
+    "static/media/abril-fatface-all-400-normal.woff": "/static/media/abril-fatface-all-400-normal.327d8bf30c4299561107.woff",
+    "static/media/open-sans-cyrillic-ext-400-normal.woff2": "/static/media/open-sans-cyrillic-ext-400-normal.01b11c560bc52c756c23.woff2",
+    "static/media/open-sans-latin-400-normal.woff2": "/static/media/open-sans-latin-400-normal.a1535f451fb7bb98f526.woff2",
+    "static/media/open-sans-condensed-cyrillic-ext-300-normal.woff2": "/static/media/open-sans-condensed-cyrillic-ext-300-normal.55f096a0675a9101e1f1.woff2",
+    "static/media/open-sans-condensed-latin-300-normal.woff2": "/static/media/open-sans-condensed-latin-300-normal.a192808a9079dee3a9e8.woff2",
+    "static/media/abril-fatface-latin-400-normal.woff2": "/static/media/abril-fatface-latin-400-normal.e28de833ee7ea7791eba.woff2",
+    "static/media/open-sans-latin-ext-400-normal.woff2": "/static/media/open-sans-latin-ext-400-normal.ccfa20f8de7f73249c39.woff2",
+    "static/media/open-sans-condensed-latin-ext-300-normal.woff2": "/static/media/open-sans-condensed-latin-ext-300-normal.78122c1297626276dd71.woff2",
+    "static/media/open-sans-cyrillic-400-normal.woff2": "/static/media/open-sans-cyrillic-400-normal.5a546777799f438b6bb4.woff2",
+    "static/media/open-sans-condensed-cyrillic-300-normal.woff2": "/static/media/open-sans-condensed-cyrillic-300-normal.4a7adf0a1be8d2ed5fd4.woff2",
+    "static/media/open-sans-greek-400-normal.woff2": "/static/media/open-sans-greek-400-normal.3064bf7e87155fcb14a1.woff2",
+    "static/media/open-sans-condensed-greek-300-normal.woff2": "/static/media/open-sans-condensed-greek-300-normal.227ef1c01e3e1ac733cf.woff2",
+    "static/media/abril-fatface-latin-ext-400-normal.woff2": "/static/media/abril-fatface-latin-ext-400-normal.0aba6cfe7a9ae0da1e20.woff2",
+    "static/media/open-sans-hebrew-400-normal.woff2": "/static/media/open-sans-hebrew-400-normal.daafcec89c2332b84c25.woff2",
+    "static/media/open-sans-vietnamese-400-normal.woff2": "/static/media/open-sans-vietnamese-400-normal.473f6b09ca8f5658857e.woff2",
+    "static/media/open-sans-condensed-vietnamese-300-normal.woff2": "/static/media/open-sans-condensed-vietnamese-300-normal.978ee29cb1efc80aa5ae.woff2",
+    "static/media/open-sans-greek-ext-400-normal.woff2": "/static/media/open-sans-greek-ext-400-normal.1ed998a42083750e175e.woff2",
+    "static/media/open-sans-condensed-greek-ext-300-normal.woff2": "/static/media/open-sans-condensed-greek-ext-300-normal.3eab241f24989585a674.woff2",
+    "index.html": "/index.html",
+    "main.5a6e26e7.css.map": "/static/css/main.5a6e26e7.css.map",
+    "main.2435503a.js.map": "/static/js/main.2435503a.js.map",
+    "787.77e46fa3.chunk.js.map": "/static/js/787.77e46fa3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a6e26e7.css",
+    "static/js/main.2435503a.js"
+  ]
+}
