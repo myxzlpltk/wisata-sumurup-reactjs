@@ -24,7 +24,7 @@ const DestinationsSection = (props) => {
   const { id } = props;
   const [open, setOpen] = useState(false);
   const [activeDestination, setActiveDestination] = useState(null);
-  const [activeIndexImage, setActiveIndexImage] = useState(null);
+  const [activeIndexImage, setActiveIndexImage] = useState(0);
   const [categories, setCategories] = useState(new Set(destinationTypes));
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
@@ -170,7 +170,9 @@ const DestinationsSection = (props) => {
                 <button
                   onClick={() =>
                     window.open(
-                      activeDestination.bigImages[activeIndexImage],
+                      (isWebpSupported()
+                        ? activeDestination.imagesWebp
+                        : activeDestination.images)[activeIndexImage],
                       "_blank",
                       "noopener,noreferrer"
                     )
@@ -196,7 +198,7 @@ const DestinationsSection = (props) => {
               </p>
 
               <button
-                onClick={() => window.open(activeDestination.directionLink)}
+                onClick={() => window.open(activeDestination.locationLink)}
                 className="relative inline-flex items-center justify-start py-2 pl-4 pr-12 overflow-hidden text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group"
               >
                 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>

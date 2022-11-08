@@ -6,7 +6,7 @@ import Image from "react-image-webp";
 
 const SocialMediaCard = (props) => {
   const {
-    data: { type, placeholder, fallback },
+    data: { type, imgWebp, img },
     width,
     onClick,
   } = props;
@@ -19,8 +19,8 @@ const SocialMediaCard = (props) => {
       role="feed"
     >
       <Image
-        src={fallback}
-        webp={placeholder}
+        src={img}
+        webp={imgWebp}
         className="rounded-lg"
         alt={`Postingan komunitas di ${type}`}
       />
@@ -51,8 +51,8 @@ SocialMediaCard.propTypes = {
   data: PropTypes.shape({
     type: PropTypes.string,
     url: PropTypes.string,
-    placeholder: PropTypes.string,
-    fallback: PropTypes.string,
+    imgWebp: PropTypes.string,
+    img: PropTypes.string,
   }),
   width: PropTypes.number,
   onClick: PropTypes.func,

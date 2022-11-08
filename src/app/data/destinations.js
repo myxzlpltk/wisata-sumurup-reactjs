@@ -22,40 +22,60 @@ const destinations = [
   {
     title: "Kedung Gede",
     description:
-      "Kedung Gede is a mountain in the province of West Java, Indonesia. " +
-      "It is located in the Cianjur Regency, about 50 km from the city of Bandung. " +
-      "The mountain is located in the Citarum River basin, and is part of the Citarum watershed.",
+      "Menyusuri bukit di wilayah gunung wilis tak akan pernah membosankan. " +
+      "Melintasi bukit menyeberangi sungai sungguh merupakan kepuasan tersendiri. " +
+      "Di wilayah ini tersimpan lokasi yang sangat mengesankan potensi alamnya. " +
+      "Banyak anak muda yang berkreasi mewujudkan impian tuk memoles sungai yang mempesona ini menjadi suatau tempat yang menarik dan elok untuk dikunjungi. " +
+      "Konsep anak muda disini adalah mengembangkan potensi yang ada tanpa merusak alam. " +
+      "Bagi pecinta alam yang ingin mengisi waktu luang dapat mampir di base camp.",
     type: "nature",
-    images: [
-      "/images/kedunggede.jpg",
-      "/images/ringinputih.jpg",
-      "/images/kedunggede.jpg",
-      "/images/ringinputih.jpg",
-      "/images/kedunggede.jpg",
-    ],
-    imagesWebp: [
-      "/images/kedunggede.webp",
-      "/images/ringinputih.webp",
-      "/images/kedunggede.webp",
-      "/images/ringinputih.webp",
-      "/images/kedunggede.webp",
-    ],
+    images: ["/destinations/kedunggede.jpg"],
+    imagesWebp: ["/destinations/kedunggede.webp"],
     locationLink: "https://goo.gl/maps/5RzwDZzjnE3QQ6C49",
-    directionLink:
-      "https://maps.google.com/maps/dir//DUNGDE+%22Kedung+Gede%22+Sumurup+2PH3%2BPF9+Pule,+Sumurup+Kec.+Bend.,+Kabupaten+Trenggalek,+Jawa+Timur+66351/@-7.9707172,111.7037205,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x2e790789e0ad9acb:0x1f42a719da96d495",
   },
   {
     title: "Ringin Putih",
     description:
-      "Ringin Putih is a mountain in the province of West Java, Indonesia. " +
-      "It is located in the Cianjur Regency, about 50 km from the city of Bandung. " +
-      "The mountain is located in the Citarum River basin, and is part of the Citarum watershed.",
-    type: "religion",
-    images: ["/images/ringinputih.jpg"],
-    imagesWebp: ["/images/kedunggede.webp"],
+      'Camping zone "Ringin Putih" ini terletak tidak jauh dari Makam Eyang Tumenggung Wiroguno. ' +
+      "Tempat ini digunakan sebagai tempat untuk berkemah karena memiliki pemandangan yang indah dan hawa yang sejuk. " +
+      "Jadi sangat cocok apabila digunakan untuk berkemah disini.",
+    type: "nature",
+    images: [
+      "/destinations/ringinputih.jpg",
+      "/destinations/ringinputih2.jpg",
+      "/destinations/ringinputih3.jpg",
+    ],
+    imagesWebp: [
+      "/destinations/ringinputih.webp",
+      "/destinations/ringinputih2.webp",
+      "/destinations/ringinputih3.webp",
+    ],
     locationLink: "https://goo.gl/maps/PAeyY2SdN6LKnwha9",
-    directionLink:
-      "https://maps.google.com/maps/dir//Camping+Zone+%22RINGIN+PUTIH%22+Pojok,+Sumurup+Kec.+Bend.+Kabupaten+Trenggalek,+Jawa+Timur+66351/@-7.9807416,111.6935271,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x2e7905dc57d9477d:0x220262a3d4a2f002",
+  },
+  {
+    title: "Makam Tumenggung Wiroguno",
+    description:
+      "Eyang Tumenggung Wiroguno berasal dari Mataram. " +
+      "Makam ini konon katanya berisi sebuah batu yang sebelum meninggal, beliau memahat sendiri batu-batu yang ada di makam ini. " +
+      "Dan terdapat kepercayaan warga sekitar bahwa apabila ada wisatawan yang berniat buruk akan ada aungan macan yang terdengar dari makam, sebaliknya apabila berniat baik maka tidak ada terjadi apa-apa. " +
+      'Sementara itu disebelah makam Eyang Tumenggung Wiroguno ini terdapat pohon beringin yang mana warga sekitar memberi nama "Ringin Putih". ' +
+      "Konon katanya apabila malam hari tertentu pohon tersebut akan berwarna putih.",
+    type: "religion",
+    images: ["/destinations/wiroguno.jpg"],
+    imagesWebp: ["/destinations/wiroguno.webp"],
+    locationLink: "https://goo.gl/maps/XvwvDZtbzxdqBkWQ8",
+  },
+  {
+    title: "Sanggar Budaya Sapta Karya",
+    description:
+      "Desa Sumurup memiliki Sanggar Budaya yang digunakan sebagai tempat berlatih jaranan dan tempat menyimpan berbagai alat yang digunakan untuk pertujukan jaranan. " +
+      "Jaranan di Desa Sumurup sendiri ada 2 grup yaitu Surya Budaya dan Rukun Budaya. " +
+      "Namun ternyata alat yang digunakan itu tidak didapat dengan cara dibeli melainikan membuat sendiri yang dilakuikan oleh pemuda anggota grup jaranan. " +
+      "Alat yang sering mereka buat sendiri adalah barongan dan baju. Waktu pengerjannya sendiri memakan waktu kurang lebih 3 minggu.",
+    type: "education",
+    images: ["/destinations/saptakarya.jpg"],
+    imagesWebp: ["/destinations/saptakarya.webp"],
+    locationLink: "https://goo.gl/maps/ciLzZDw2HefHFcM38",
   },
 ];
 

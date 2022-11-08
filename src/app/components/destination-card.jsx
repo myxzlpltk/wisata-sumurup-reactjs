@@ -46,7 +46,7 @@ const DestinationCard = (props) => {
       >
         {translations[type] || type}
       </span>
-      <h3 className="text-lg -tracking-wide">{title}</h3>
+      <h3 className="text-lg -tracking-wide line-clamp-1">{title}</h3>
       <p className="text-sm text-gray-500 tracking-tighter line-clamp-2">
         {description}
       </p>

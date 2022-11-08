@@ -31,5 +31,6 @@ for image in images:
 plt.title('Kompresi Format WebP')
 plt.xlabel('Kompresi (%)')
 plt.ylabel('Frekuensi')
-plt.hist(data, bins=3)
+plt.xlim((0, 100))
+plt.hist(data, bins=5)
 plt.show()

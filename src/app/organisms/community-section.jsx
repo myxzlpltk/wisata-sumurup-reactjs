@@ -44,14 +44,15 @@ const CommunitySection = (props) => {
               kamu disini!
             </p>
             <div className="text-center">
-              <button
+              <a
+                href="mailto:myxzlpltk@gmail.com?subject=Saya%20ingin%20memajang%20foto%20saya&body=Ketik%20link%20postingan%20sosial%20media%20kamu%20disini%0D%0A1.%20____%0D%0A2.%20____"
                 className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-white"
                 data-rounded="rounded-md"
                 data-primary="blue-600"
                 data-primary-reset="{}"
               >
                 Saya ingin memajang foto saya
-              </button>
+              </a>
             </div>
           </div>
         </div>
