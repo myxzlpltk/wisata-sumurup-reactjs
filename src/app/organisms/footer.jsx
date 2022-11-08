@@ -67,7 +67,7 @@ const Footer = () => {
                 className="py-2 hover:opacity-75"
                 href="https://kkn.lp2m.um.ac.id"
               >
-                LP2M Universitas Negeri Malang
+                LPPM Universitas Negeri Malang
               </a>
               <a
                 className="py-2 hover:opacity-75"
